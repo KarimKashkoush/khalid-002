@@ -533,7 +533,6 @@ button {
     display: flex;
     justify-content: center;
     max-width: 250px;
-    min-width: 230px;
 }
 
 .exploer-new .swiper .content {
@@ -626,7 +625,7 @@ button {
 /* end exploer-new */
 
 /* Start Partenrs  */
-.partners {
+/* .partners {
     padding-inline: 15px;
     padding-inline: 15px;
 
@@ -646,7 +645,7 @@ button {
         }
 
     }
-}
+} */
 
 /* Start Partenrs  */
 

@@ -72,11 +72,8 @@ var swiper2 = new Swiper(".mySwiper2", {
         991: {
             slidesPerView: 4,
         },
-        1299: {
-            slidesPerView: 5,
-        },
         1400: {
-            slidesPerView: 6,
+            slidesPerView: 5,
         },
     },
 });
