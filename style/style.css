@@ -606,9 +606,6 @@ button {
     border: 1px solid #ffffff41;
     overflow: hidden;
     padding-top: 15px;
-    width: 300px;
-    max-width: 350px;
-    min-width: 300px;
 
     a img {
         display: block;
@@ -752,22 +749,3 @@ button {
 }
 
 
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
