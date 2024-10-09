@@ -7,16 +7,24 @@ const year = new Date().getFullYear()
 const yearNow = document.getElementById('yearNow')
 
 
+window.onload = () => {
+    setTimeout(() => {
+        const loading = document.getElementById('loading');
+        loading.style.display = 'none';
+    }, 1000);
+};
+
+
 yearNow.textContent = year;
 
 button.onclick = (event) => {
     button.classList.toggle('open');
     navbar.classList.toggle('open');
     blur.classList.toggle('blur');
-    
+
     // Toggle scroll lock
     document.body.classList.toggle('scroll-lock');
-    
+
     event.stopPropagation();
 };
 
@@ -67,7 +75,7 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     freeMode: true,
 
-        breakpoints: {
+    breakpoints: {
         0: {
             slidesPerView: 2,
         },
