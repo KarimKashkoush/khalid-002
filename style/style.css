@@ -385,9 +385,6 @@ button {
     margin-block: var(--50);
     padding-inline: 15px;
 
-    .swiper-slide {
-        min-width: 100%;
-    }
 
     .card {
         .content {
@@ -534,8 +531,6 @@ button {
 
 
 .swiper-slide {
-    max-width: 300px;
-    min-width: 250px;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
