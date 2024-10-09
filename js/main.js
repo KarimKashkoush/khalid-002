@@ -60,11 +60,15 @@ var swiper = new Swiper(".mySwiper", {
 
 });
 
-var swiper = new Swiper(".mySwiper2", {
-    slidesPerView: 4,
+
+var swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 3,
     centeredSlides: true,
     spaceBetween: 30,
     grabCursor: true,
+    freeMode: true,
+    loop: true,
+
         breakpoints: {
         0: {
             slidesPerView: 1,
