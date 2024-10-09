@@ -385,6 +385,10 @@ button {
     margin-block: var(--50);
     padding-inline: 15px;
 
+    .swiper-slide {
+        min-width: 100%;
+    }
+
     .card {
         .content {
             border: 1px solid #ababab73;
@@ -518,60 +522,59 @@ button {
 /* Start announcement */
 
 /* Start exploer-new */
-
-.exploer-new {
+.slides {
+    margin-left: auto;
+    margin-block: var(--50);
     padding-inline: 15px;
-    margin-block: var(--100);
-    position: relative;
+
+    .title {
+        margin-bottom: 25px;
+    }
 }
 
-.exploer-new .title {
-    margin-bottom: 35px;
-}
 
-.exploer-new .swiper-slide {
-    display: flex;
-    justify-content: center;
-    max-width: 250px;
-}
-
-.exploer-new .swiper .content {
-    max-width: 250px;
-    min-width: 230px;
-    position: relative;
-
-
-    border-radius: 10px;
+.swiper-slide {
+    max-width: 300px;
+    min-width: 250px;
     overflow: hidden;
+    border-radius: 10px;
+    position: relative;
 
-    img {
+
+    a img {
         width: 100%;
+        position: relative;
+        z-index: -1;
     }
 
-    .text {
+
+    a .content .text {
         position: absolute;
-        width: 90%;
         bottom: 5px;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 5px;
+        z-index: 10;
         color: var(--w-color);
-        z-index: 2;
-
+        padding-top: 15px;
+        
         p {
-            font-size: 20px;
+            font-size: 18px;
+            color: var(--w-color);
+            position: relative;
+            z-index: 3;
         }
-
-    }
-
-
-    @media (max-width: 786px) {
-        .exploer-new .swiper .content {
-            width: 350px;
+        span {
+            color: var(--w-color);
+            position: relative;
+            z-index: 3;
         }
     }
 }
+.shadow {
+    color: var(--w-color);
+    width: 100%;
+}
 
-.exploer-new .swiper .content::before {
+.shadow::before {
     content: "";
     position: absolute;
     z-index: 1;
@@ -580,26 +583,19 @@ button {
     width: 100%;
     height: 100%;
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.512) 0%, rgba(0, 0, 0, 0.062237394957983194) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.452) 0%, rgba(0, 0, 0, 0.087) 100%);
+    z-index: 1;
 }
 
-.exploer-new .swiper-slide a .text {
+.slides .text {
     display: flex;
     flex-direction: column;
-    gap: 3px;
-
-    span {
-        font-size: 14px;
-
-        span {
-            font-size: 16px;
-            color: var(--w-color);
-        }
-    }
-
-    p {
-        font-size: 16px;
+    gap: 3px; 
+    font-size: 14px;
+    p,
+    span span {
         color: var(--w-color);
+        font-size: 16px;
     }
 
     i {
@@ -607,21 +603,19 @@ button {
     }
 }
 
-.exploer-new .box {
-    width: 350px;
-    max-width: 80%;
-    padding: 10px;
-    border: 1px solid #ffffff33;
-    border-radius: 5px;
 
-    a {
-        width: 100%;
-    }
-    img {
+.slides .slide-box {
+    border: 1px solid #ffffff41;
+    overflow: hidden;
+    padding-top: 15px;
+    width: 300px;
+    max-width: 350px;
+    min-width: 300px;
+
+    a img {
         display: block;
+        width: 60%;
         margin: auto;
-        width: 150px;
-        max-width: 100%;
     }
 }
 
@@ -656,6 +650,7 @@ button {
 .footer {
     margin-top: var(--100);
     padding-inline: 15px;
+
     >section:not(:last-child) {
         padding-block: 15px;
         border-bottom: 1px solid #ffffff33;
@@ -663,15 +658,18 @@ button {
 
     .footer-top {
         text-align: center;
+
         h2 {
             font-size: 28px;
             margin-bottom: 12px;
         }
+
         ul {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 15px;
+
             li a {
                 font-size: 22px;
             }
@@ -687,6 +685,7 @@ button {
 
     .footer-app {
         text-align: center;
+
         p {
             margin-bottom: 15px;
         }
@@ -701,6 +700,7 @@ button {
 
     .footer-pay {
         text-align: center;
+
         span {
             display: block;
             margin-bottom: 15px;
@@ -716,11 +716,13 @@ button {
 
     .footer-bottom {
         padding-block: 15px;
+
         section {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+
             img {
                 width: 65px;
             }
@@ -731,12 +733,14 @@ button {
             justify-content: center;
             flex-wrap: wrap;
             gap: 15px;
+
             li a {
                 font-size: 22px;
             }
         }
     }
 }
+
 /* End Footer */
 
 /* End Main */

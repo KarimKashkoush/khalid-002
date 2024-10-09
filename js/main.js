@@ -43,36 +43,25 @@ var swiper = new Swiper(".mySwiper", {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    },
+    }
 
 });
 
 var swiper2 = new Swiper(".mySwiper2", {
-    slidesPerView: 5,
+    slidesPerView: "auto",
     spaceBetween: 30,
-    loop: true,
-    centeredSlides: true,
-    
-    speed: 800, 
-    effect: 'slide', 
-
+    freeMode: true,
     breakpoints: {
-        1200: {
-            slidesPerView: 5,
-        },
-        991: {
-            slidesPerView: 4,
-        },
-        786: {
-            slidesPerView: 3,
-        },
-        520: {
-            slidesPerView: 2,
-        },
         0: {
             slidesPerView: 1,
         },
-    },
-});
+        250: {
+            slidesPerView: 3,
+        },
+        786: {
+            slidesPerView: 3,
+        }
+    }
+  });
 
 
