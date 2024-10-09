@@ -180,7 +180,7 @@ button {
             padding: 15px;
             background-color: var(--b-color);
             width: 450px;
-            max-width: 100%;
+            max-width: 85%;
             height: calc(100vh - 70px);
             transition: var(--transition-3);
 
@@ -747,3 +747,11 @@ button {
 /* End Footer */
 
 /* End Main */
+
+.blur {
+    filter: blur(10px);
+}
+
+.scroll-lock {
+    overflow: hidden;
+}

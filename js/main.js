@@ -2,18 +2,27 @@
 const button = document.getElementById('nav-icon');
 const navbar = document.getElementById('navbar');
 const headerSearch = document.getElementById('headerSearch');
+const blur = document.getElementById('blur');
 
 
 button.onclick = (event) => {
-    button.classList.toggle('open')
+    button.classList.toggle('open');
     navbar.classList.toggle('open');
-    event.stopPropagation(); // منع إغلاق القائمة عند الضغط على الزر
+    blur.classList.toggle('blur');
+    
+    // Toggle scroll lock
+    document.body.classList.toggle('scroll-lock');
+    
+    event.stopPropagation();
 };
+
 
 document.addEventListener('click', (event) => {
     if (!navbar.contains(event.target) && !button.contains(event.target)) {
         navbar.classList.remove('open');
         button.classList.remove('open')
+        blur.classList.remove('blur')
+        document.body.classList.remove('scroll-lock');
     }
 });
 
@@ -46,32 +55,6 @@ var swiper = new Swiper(".mySwiper", {
     }
 
 });
-
-// var swiper2 = new Swiper(".mySwiper2", {
-//     slidesPerView: 3,
-//     spaceBetween: 30,
-//     freeMode: true,
-//     // breakpoints: {
-//     //     0: {
-//     //         slidesPerView: 1,
-//     //     },
-//     //     300: {
-//     //         slidesPerView: 2,
-//     //     },
-//     //     786: {
-//     //         slidesPerView: 3,
-//     //     },
-//     //     991: {
-//     //         slidesPerView: 4,
-//     //     },
-//     //     1200: {
-//     //         slidesPerView: 5,
-//     //     },
-//     //     1400: {
-//     //         slidesPerView: 6,
-//     //     },
-//     // }
-//   });
 
 var swiper = new Swiper(".mySwiper2", {
     slidesPerView: 4,
