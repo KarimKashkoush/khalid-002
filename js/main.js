@@ -53,25 +53,29 @@ var swiper2 = new Swiper(".mySwiper2", {
     spaceBetween: 30,
     loop: true,
     centeredSlides: true,
+    
+    // Adding smoothness
+    speed: 800, // Adjust the speed (in milliseconds)
+    effect: 'slide', // Default effect, can be 'fade', 'cube', 'coverflow', etc.
 
-    speed: 800,
-
+    // Breakpoints for responsive slides
     breakpoints: {
-        0: {
-            slidesPerView: 1,
-        },
-        520: {
-            slidesPerView: 2,
-        },
-        786: {
-            slidesPerView: 3,
+        1200: {
+            slidesPerView: 5,
         },
         991: {
             slidesPerView: 4,
         },
-        1200: {
-            slidesPerView: 5,
+        786: {
+            slidesPerView: 3,
+        },
+        520: {
+            slidesPerView: 2,
+        },
+        0: {
+            slidesPerView: 1,
         },
     },
 });
+
 
