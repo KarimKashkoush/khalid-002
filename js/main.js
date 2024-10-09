@@ -51,6 +51,8 @@ var swiper = new Swiper(".mySwiper", {
 var swiper2 = new Swiper(".mySwiper2", {
     slidesPerView: 5,
     spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
     freeMode: true,
     
     // Adding smoothness
