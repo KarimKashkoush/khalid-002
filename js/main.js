@@ -45,7 +45,7 @@ function changeBackgroundColor() {
 // End Header 
 
 
-var swiper = new Swiper(".mySwiper", {
+var swiper2 = new Swiper(".mySwiper2", {
     slidesPerView: "auto",
     centeredSlides: true,
     spaceBetween: 30,
@@ -61,11 +61,10 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
-var swiper2 = new Swiper(".mySwiper2", {
-    slidesPerView: 'auto',
-    centeredSlides: true,
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
     spaceBetween: 30,
-    grabCursor: true,
     freeMode: true,
 
         breakpoints: {
