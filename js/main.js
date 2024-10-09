@@ -49,22 +49,30 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 var swiper2 = new Swiper(".mySwiper2", {
-    slidesPerView: 5,
+    slidesPerView: 3, 
     spaceBetween: 30,
-    loop: true,
-    freeMode: true,
+    loop: true, 
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    loopedSlides: 5, 
     breakpoints: {
         0: {
             slidesPerView: 1,
+            loopedSlides: 1, 
         },
         520: {
             slidesPerView: 2,
+            loopedSlides: 2, 
         },
         786: {
             slidesPerView: 3,
+            loopedSlides: 3,
         },
         991: {
             slidesPerView: 4,
+            loopedSlides: 4,
         },
     },
 });
