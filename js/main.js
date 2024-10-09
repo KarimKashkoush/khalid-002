@@ -47,15 +47,42 @@ var swiper = new Swiper(".mySwiper", {
 
 });
 
-var swiper2 = new Swiper(".mySwiper2", {
-    slidesPerView: 3,
+// var swiper2 = new Swiper(".mySwiper2", {
+//     slidesPerView: 3,
+//     spaceBetween: 30,
+//     freeMode: true,
+//     // breakpoints: {
+//     //     0: {
+//     //         slidesPerView: 1,
+//     //     },
+//     //     300: {
+//     //         slidesPerView: 2,
+//     //     },
+//     //     786: {
+//     //         slidesPerView: 3,
+//     //     },
+//     //     991: {
+//     //         slidesPerView: 4,
+//     //     },
+//     //     1200: {
+//     //         slidesPerView: 5,
+//     //     },
+//     //     1400: {
+//     //         slidesPerView: 6,
+//     //     },
+//     // }
+//   });
+
+var swiper = new Swiper(".mySwiper2", {
+    slidesPerView: 4,
+    centeredSlides: true,
     spaceBetween: 30,
-    freeMode: true,
-    breakpoints: {
+    grabCursor: true,
+        breakpoints: {
         0: {
             slidesPerView: 1,
         },
-        300: {
+        500: {
             slidesPerView: 2,
         },
         786: {
@@ -71,6 +98,5 @@ var swiper2 = new Swiper(".mySwiper2", {
             slidesPerView: 6,
         },
     }
-  });
-
+});
 

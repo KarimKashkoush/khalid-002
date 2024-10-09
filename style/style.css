@@ -555,13 +555,14 @@ button {
         z-index: 10;
         color: var(--w-color);
         padding-top: 15px;
-        
+
         p {
             font-size: 18px;
             color: var(--w-color);
             position: relative;
             z-index: 3;
         }
+
         span {
             color: var(--w-color);
             position: relative;
@@ -569,6 +570,7 @@ button {
         }
     }
 }
+
 .shadow {
     color: var(--w-color);
     width: 100%;
@@ -590,8 +592,9 @@ button {
 .slides .text {
     display: flex;
     flex-direction: column;
-    gap: 3px; 
+    gap: 3px;
     font-size: 14px;
+
     p,
     span span {
         color: var(--w-color);
@@ -744,4 +747,3 @@ button {
 /* End Footer */
 
 /* End Main */
-
