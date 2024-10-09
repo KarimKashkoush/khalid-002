@@ -3,7 +3,11 @@ const button = document.getElementById('nav-icon');
 const navbar = document.getElementById('navbar');
 const headerSearch = document.getElementById('headerSearch');
 const blur = document.getElementById('blur');
+const year = new Date().getFullYear()
+const yearNow = document.getElementById('yearNow')
 
+
+yearNow.textContent = year;
 
 button.onclick = (event) => {
     button.classList.toggle('open');
