@@ -48,19 +48,28 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 var swiper2 = new Swiper(".mySwiper2", {
-    slidesPerView: "auto",
+    slidesPerView: 3,
     spaceBetween: 30,
     freeMode: true,
     breakpoints: {
         0: {
             slidesPerView: 1,
         },
-        250: {
-            slidesPerView: 3,
+        300: {
+            slidesPerView: 2,
         },
         786: {
             slidesPerView: 3,
-        }
+        },
+        991: {
+            slidesPerView: 4,
+        },
+        1200: {
+            slidesPerView: 5,
+        },
+        1400: {
+            slidesPerView: 6,
+        },
     }
   });
 
