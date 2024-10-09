@@ -23,7 +23,7 @@ window.onscroll = function () {
 };
 
 function changeBackgroundColor() {
-    if (document.documentElement.scrollTop > 50) {
+    if (document.documentElement.scrollTop > 150) {
         headerSearch.style.display = "block"
     } else {
         headerSearch.style.display = "none"
@@ -51,29 +51,20 @@ var swiper = new Swiper(".mySwiper", {
 var swiper2 = new Swiper(".mySwiper2", {
     slidesPerView: 5,
     spaceBetween: 30,
+    loop: true,
     freeMode: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
     breakpoints: {
-        // عند عرض الشاشة على أقل من 768 بيكسل، إظهار شريحتين فقط
         0: {
             slidesPerView: 1,
         },
-        // عند عرض الشاشة على أقل من 480 بيكسل، إظهار شريحة واحدة فقط
-        480: {
+        520: {
             slidesPerView: 2,
         },
-        // عند عرض الشاشة على أقل من 480 بيكسل، إظهار شريحة واحدة فقط
         786: {
             slidesPerView: 3,
         },
         991: {
             slidesPerView: 4,
-        },
-        1400: {
-            slidesPerView: 5,
         },
     },
 });

@@ -607,13 +607,16 @@ button {
     }
 }
 
-.exploer-new .box a {
+.exploer-new .box {
     width: 350px;
     max-width: 80%;
     padding: 10px;
     border: 1px solid #ffffff33;
     border-radius: 5px;
 
+    a {
+        width: 100%;
+    }
     img {
         display: block;
         margin: auto;
@@ -625,7 +628,7 @@ button {
 /* end exploer-new */
 
 /* Start Partenrs  */
-/* .partners {
+.partners {
     padding-inline: 15px;
     padding-inline: 15px;
 
@@ -645,8 +648,95 @@ button {
         }
 
     }
-} */
+}
 
 /* Start Partenrs  */
+
+/* Start Footer */
+.footer {
+    margin-top: var(--100);
+    padding-inline: 15px;
+    >section:not(:last-child) {
+        padding-block: 15px;
+        border-bottom: 1px solid #ffffff33;
+    }
+
+    .footer-top {
+        text-align: center;
+        h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            li a {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .footer-app {
+        text-align: center;
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+
+    .footer-pay {
+        text-align: center;
+        span {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+
+    .footer-bottom {
+        padding-block: 15px;
+        section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            img {
+                width: 65px;
+            }
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            li a {
+                font-size: 22px;
+            }
+        }
+    }
+}
+/* End Footer */
 
 /* End Main */
