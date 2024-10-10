@@ -1,5 +1,4 @@
-// End Header 
-
+// End Head
 
 
 
@@ -9,10 +8,6 @@ window.onload = () => {
         loading.style.display = 'none';
     }, 1000);
 };
-
-
-
-
 
 
 // End Header 
