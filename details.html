@@ -58,7 +58,7 @@
         </section>
 
         <button>
-            <div id="nav-icon">
+            <div id="nav-icon" onclick="openNav()">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -489,10 +489,49 @@
             </section>
         </footer>
         <!-- End Footer -->
-    </section>
-    <!-- End Main -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
+        </section>
+        <!-- End Main -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            const year = new Date().getFullYear()
+            yearNow.textContent = year;
+
+            window.onscroll = function () {
+                changeBackgroundColor();
+            };
+
+            function changeBackgroundColor() {
+                const headerSearch = document.getElementById('headerSearch');
+                if (document.documentElement.scrollTop > 150) {
+                    headerSearch.style.display = "block"
+                } else {
+                    headerSearch.style.display = "none"
+                }
+            }
+
+            const button = document.getElementById('nav-icon');
+            const navbar = document.getElementById('navbar');
+            const blur = document.getElementById('blur');
+            function openNav(event) {
+                button.classList.toggle('open');
+                navbar.classList.toggle('open');
+                blur.classList.toggle('blur');
+
+                // Toggle scroll lock
+                document.body.classList.toggle('scroll-lock');
+
+                event.stopPropagation();
+            };
+            document.addEventListener('click', (event) => {
+                if (!navbar.contains(event.target) && !button.contains(event.target)) {
+                    navbar.classList.remove('open');
+                    button.classList.remove('open')
+                    blur.classList.remove('blur')
+                    document.body.classList.remove('scroll-lock');
+                }
+            });
+        </script>
 </body>
 
 </html>

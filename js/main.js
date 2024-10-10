@@ -1,10 +1,6 @@
 // End Header 
-const button = document.getElementById('nav-icon');
-const navbar = document.getElementById('navbar');
-const headerSearch = document.getElementById('headerSearch');
-const blur = document.getElementById('blur');
-const year = new Date().getFullYear()
-const yearNow = document.getElementById('yearNow')
+
+
 
 
 window.onload = () => {
@@ -15,44 +11,11 @@ window.onload = () => {
 };
 
 
-yearNow.textContent = year;
-
-button.onclick = (event) => {
-    button.classList.toggle('open');
-    navbar.classList.toggle('open');
-    blur.classList.toggle('blur');
-
-    // Toggle scroll lock
-    document.body.classList.toggle('scroll-lock');
-
-    event.stopPropagation();
-};
 
 
-document.addEventListener('click', (event) => {
-    if (!navbar.contains(event.target) && !button.contains(event.target)) {
-        navbar.classList.remove('open');
-        button.classList.remove('open')
-        blur.classList.remove('blur')
-        document.body.classList.remove('scroll-lock');
-    }
-});
 
 
-window.onscroll = function () {
-    changeBackgroundColor();
-};
-
-function changeBackgroundColor() {
-    if (document.documentElement.scrollTop > 150) {
-        headerSearch.style.display = "block"
-    } else {
-        headerSearch.style.display = "none"
-    }
-}
 // End Header 
-
-
 var swiper2 = new Swiper(".mySwiper2", {
     slidesPerView: "auto",
     centeredSlides: true,
@@ -65,10 +28,7 @@ var swiper2 = new Swiper(".mySwiper2", {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     }
-
 });
-
-
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
@@ -94,3 +54,24 @@ var swiper = new Swiper(".mySwiper", {
     }
 });
 
+// Forms Register
+function toSignup() {
+    let forms = document.forms;
+    for (let i = 0; i < forms.length; i++) {
+        forms[i].style.right = '0'
+    }
+}
+
+function toSignin() {
+    let forms = document.forms;
+    for (let i = 0; i < forms.length; i++) {
+        forms[i].style.right = 'calc(-100% - 30px)'
+    }
+}
+
+function forgetPassword() {
+    let forms = document.forms;
+    for (let i = 0; i < forms.length; i++) {
+        forms[i].style.right = 'calc(-200% - 60px)'
+    }
+}

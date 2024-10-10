@@ -959,3 +959,201 @@ button {
 }
 /* End det */
 /* End Details */
+
+/* =================================== */
+/* Regiter Page */
+    .main-register {
+        padding-top: 20px;
+        min-height: calc(100vh - 140px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .forms {
+            position: relative;
+            /* border: 1px solid #ababab73; */
+            border-radius: 10px;
+            padding: 15px;
+            width: 470px;
+            max-width: 100%;
+            margin-inline: 15px;
+            display: flex;
+            gap: 30px;
+            overflow: hidden;
+            
+
+            .form-header {
+                font-size: 24px;
+                margin-bottom: 20px;
+                
+                display: flex;
+                justify-content: space-between;
+                align-items: center;  
+                gap: 30px;                
+                p {
+                    font-size: 24px;
+                }
+                
+                span {
+                    font-size: 14px;
+                    color: var(--link-color);
+                }
+                
+                i {
+                    background-color: #595858;
+                    width: 80px;
+                    height: 80px;
+                    font-size: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                }
+            }
+            
+            form {
+                position: relative;
+                width: 440px;
+                transition: var(--transition-3);
+                right: calc(-100% - 30px);
+                
+                >span {
+                    display: block;
+                    color: var(--link-color);
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    transition: var(--transition-3);
+
+                    &:hover {
+                        color: var(--w-color);
+                    }
+                }
+            }
+
+            input {
+                width: 100%;
+            }
+
+            .forgetPassword {
+                display: block;
+                text-align: left;
+                margin-bottom: 20px;
+                color: #3b82f6;
+                cursor: pointer;
+            }
+
+            .name {
+                display: flex;
+                gap: 10px;
+                
+                >section {
+                    flex: 1;
+                }
+            }
+
+            .email span:last-child {
+                color: var(--link-color);
+                font-size: 12px;
+                margin-top: 5px;
+                display: block;
+            }
+
+            button {
+                display: block;
+                width: 100%;
+                background-color: #e52a6e;
+                color: var(--w-color);
+                padding: 8px 16px;
+                border: none;
+                cursor: pointer;
+                margin-bottom: 20px;
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            .another {
+                padding-top: 20px;
+                border-top: 1px solid #ababab73;
+                text-align: center;
+                p {
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                }
+
+                span {
+                    border: 2px solid #ababab73;
+                    padding: 4px 16px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    color: var(--link-color);
+                }
+            }
+
+            .form-control {
+                margin-bottom: 25px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+
+        #errorMassege {
+            color: #ff6b6b;
+            font-size: 12px;
+        }
+
+        .error {
+            border-color: #ff6b6b;
+        }
+    }
+
+
+    @media (max-width: 522px) {
+        .main-register .forms {
+            width: 400px;
+
+            form {
+                width: 370px;
+                .form-header p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+        .main-register .forms {
+            width: 350px;
+
+            form {
+                width: calc(350px - 30px);
+            }
+        }
+    }
+
+    @media (max-width: 395px) {
+        .main-register .forms {
+            width: 300px;
+
+            form {
+                width: calc(300px - 30px);
+            }
+        }
+    }
+
+    @media (max-width: 350px) {
+
+        .main-register .forms {
+            width: 250px;
+
+            form {
+                width: calc(250px - 30px);
+            }
+        }
+    }
+/* Regiter Page */
+/* =================================== */
