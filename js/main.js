@@ -70,3 +70,34 @@ function forgetPassword() {
         forms[i].style.right = 'calc(-200% - 60px)'
     }
 }
+
+
+// 
+
+let dateSelect = document.getElementById('dateBook');
+let timeSelect = document.getElementById('timeBook');
+let tickectSelect = document.getElementById('tickectBook');
+let ticketsNumber = document.getElementById('ticketsNumber');
+let imageTicket = document.getElementById('imageTicket');
+let requestTicket = document.getElementById('requestTicket');
+let ticketForm = document.getElementById('ticketForm');
+
+function formControl(event) {
+    if (dateSelect.value == '' || timeSelect.value == '' || tickectSelect.value == '' || ticketsNumber.value == '') {
+        event.preventDefault()
+    }
+}
+
+ticketForm.onchange = () => {
+    if (dateSelect.value !== '' && timeSelect.value !== '' && tickectSelect.value !== '' && ticketsNumber.value !== '') {
+        imageTicket.style.display = "none"
+        requestTicket.style.display = "block"
+    }
+    else {
+        imageTicket.style.display = "block"
+        requestTicket.style.display = "none"
+    }
+}
+
+
+

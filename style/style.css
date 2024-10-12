@@ -33,7 +33,8 @@ ul {
 }
 
 input,
-button {
+button,
+select {
     font-family: vazirmatn, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
     outline: none;
     border: 1px solid var(--link-color);
@@ -850,6 +851,7 @@ button {
 
     .box {
         flex: 2;
+
         .date {
             border: 1px solid #ababab73;
             padding: 15px;
@@ -917,6 +919,7 @@ button {
             h2 {
                 margin-bottom: 10px;
             }
+
             span {
                 font-size: 10px;
                 color: var(--link-color);
@@ -933,15 +936,17 @@ button {
                 margin-top: 10px;
                 margin-bottom: 20px;
             }
-            
+
             >section {
                 border-top: 1px solid #ababab73;
                 display: flex;
                 align-items: center;
                 gap: 10px;
+
                 i {
                     font-size: 26px;
                 }
+
                 padding-block: 20px;
             }
         }
@@ -951,212 +956,406 @@ button {
 @media (max-width: 1199px) {
     .details {
         flex-direction: column-reverse;
+
         .reg {
             width: 100%;
         }
 
     }
 }
+
 /* End det */
 /* End Details */
 
 /* =================================== */
 /* Regiter Page */
-    .main-register {
-        padding-top: 20px;
-        min-height: calc(100vh - 140px);
+.main-register {
+    padding-top: 20px;
+    min-height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .forms {
+        position: relative;
+        /* border: 1px solid #ababab73; */
+        border-radius: 10px;
+        padding: 15px;
+        width: 470px;
+        max-width: 100%;
+        margin-inline: 15px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        gap: 30px;
+        overflow: hidden;
 
-        .forms {
-            position: relative;
-            /* border: 1px solid #ababab73; */
-            border-radius: 10px;
-            padding: 15px;
-            width: 470px;
-            max-width: 100%;
-            margin-inline: 15px;
+
+        .form-header {
+            font-size: 24px;
+            margin-bottom: 20px;
+
             display: flex;
+            justify-content: space-between;
+            align-items: center;
             gap: 30px;
-            overflow: hidden;
-            
 
-            .form-header {
+            p {
                 font-size: 24px;
-                margin-bottom: 20px;
-                
+            }
+
+            span {
+                font-size: 14px;
+                color: var(--link-color);
+            }
+
+            i {
+                background-color: #595858;
+                width: 80px;
+                height: 80px;
+                font-size: 40px;
                 display: flex;
-                justify-content: space-between;
-                align-items: center;  
-                gap: 30px;                
-                p {
-                    font-size: 24px;
-                }
-                
-                span {
-                    font-size: 14px;
-                    color: var(--link-color);
-                }
-                
-                i {
-                    background-color: #595858;
-                    width: 80px;
-                    height: 80px;
-                    font-size: 40px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 50%;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+            }
+        }
+
+        form {
+            border: 1px solid #ababab73;
+            padding: 15px;
+            border-radius: 10px;
+            position: relative;
+            width: 440px;
+            transition: var(--transition-3);
+            right: calc(-100% - 30px);
+
+            >span {
+                display: block;
+                color: var(--link-color);
+                margin-bottom: 15px;
+                cursor: pointer;
+                transition: var(--transition-3);
+
+                &:hover {
+                    color: var(--w-color);
                 }
             }
-            
-            form {
-                border: 1px solid #ababab73;
-                padding: 15px;
-                border-radius: 10px;
-                position: relative;
-                width: 440px;
-                transition: var(--transition-3);
-                right: calc(-100% - 30px);
-                
-                >span {
-                    display: block;
-                    color: var(--link-color);
-                    margin-bottom: 15px;
-                    cursor: pointer;
-                    transition: var(--transition-3);
+        }
 
-                    &:hover {
-                        color: var(--w-color);
+        input {
+            width: 100%;
+        }
+
+        .forgetPassword {
+            display: block;
+            text-align: left;
+            margin-bottom: 20px;
+            color: #3b82f6;
+            cursor: pointer;
+        }
+
+        .name {
+            display: flex;
+            gap: 10px;
+
+            >section {
+                flex: 1;
+            }
+        }
+
+        .email span:last-child {
+            color: var(--link-color);
+            font-size: 12px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background-color: #e52a6e;
+            color: var(--w-color);
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .another {
+            padding-top: 20px;
+            border-top: 1px solid #ababab73;
+            text-align: center;
+
+            p {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            span {
+                border: 2px solid #ababab73;
+                padding: 4px 16px;
+                border-radius: 10px;
+                cursor: pointer;
+                color: var(--link-color);
+            }
+        }
+
+        .form-control {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    #errorMassege {
+        color: #ff6b6b;
+        font-size: 12px;
+    }
+
+    .error {
+        border-color: #ff6b6b;
+    }
+}
+
+
+@media (max-width: 522px) {
+    .main-register .forms {
+        width: 400px;
+
+        form {
+            width: 370px;
+
+            .form-header p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .main-register .forms {
+        width: 350px;
+
+        form {
+            width: calc(350px - 30px);
+        }
+    }
+}
+
+@media (max-width: 395px) {
+    .main-register .forms {
+        width: 300px;
+
+        form {
+            width: calc(300px - 30px);
+        }
+    }
+}
+
+@media (max-width: 350px) {
+
+    .main-register .forms {
+        width: 250px;
+
+        form {
+            width: calc(250px - 30px);
+        }
+    }
+}
+
+/* Regiter Page */
+/* =================================== */
+/* =================================== */
+/* Start main-ticket */
+.main-ticket {
+    padding-top: 20px;
+    padding-inline: 15px;
+
+    >a {
+        transition: var(--transition-3);
+        margin-bottom: 10px;
+
+        &:hover {
+            color: var(--w-color);
+        }
+    }
+
+    .contain-page {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+
+        >section {
+            border: 1px solid #ababab73;
+            border-radius: 15px;
+            padding: 15px;
+            flex: 1;
+        }
+
+
+        .form {
+
+
+            h2 {
+                margin-bottom: 10px;
+            }
+
+            form {
+                .date-book .input {
+                    display: flex;
+                    gap: 15px;
+                }
+
+                .form-control {
+                    margin-bottom: 20px;
+                }
+
+                select,
+                input {
+                    width: 100%;
+                    padding-block: 15px;
+                }
+
+                select {
+                    background-color: var(--b-color);
+                    color: var(--w-color);
+                    font-weight: 700;
+
+                    option {
+                        font-weight: 700;
+                        background-color: var(--w-color);
+                        color: var(--b-color);
+                    }
+                }
+
+                button {
+                    background-color: #e52a6e;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                    padding-block: 15px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .ticket {
+            .ticket-top {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                border-bottom: 1px solid #ababab73;
+                padding-bottom: 15px;
+
+                img {
+                    width: 110px;
+                }
+
+                .title {
+                    p {
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 1.6;
+                        margin-bottom: 2px;
+                    }
+
+                    span {
+                        display: block;
+                        color: var(--link-color);
+                        line-height: 1.6;
+                        margin-bottom: 2px;
                     }
                 }
             }
 
-            input {
-                width: 100%;
-            }
+            .image {
+                text-align: center;
+                padding-block: 30px;
 
-            .forgetPassword {
-                display: block;
-                text-align: left;
-                margin-bottom: 20px;
-                color: #3b82f6;
-                cursor: pointer;
-            }
-
-            .name {
-                display: flex;
-                gap: 10px;
-                
-                >section {
-                    flex: 1;
+                img {
+                    margin-bottom: 15px;
                 }
             }
 
-            .email span:last-child {
-                color: var(--link-color);
-                font-size: 12px;
-                margin-top: 5px;
-                display: block;
-            }
+            .request {
+                display: none;
 
-            button {
-                display: block;
-                width: 100%;
-                background-color: #e52a6e;
-                color: var(--w-color);
-                padding: 8px 16px;
-                border: none;
-                cursor: pointer;
-                margin-bottom: 20px;
-                font-weight: 700;
-                font-size: 18px;
-            }
-
-            .another {
-                padding-top: 20px;
-                border-top: 1px solid #ababab73;
-                text-align: center;
-                p {
-                    font-size: 14px;
+                h2 {
                     margin-bottom: 15px;
                 }
 
-                span {
-                    border: 2px solid #ababab73;
-                    padding: 4px 16px;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    color: var(--link-color);
+                >p {
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                }
+
+                section {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+
+                    i {
+                        font-size: 14px;
+                    }
+
+                    #tikectsnumber {
+                        font-size: 16px;
+                    }
+                }
+
+                .ticket {
+                    margin-bottom: 10px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .main-ticket {
+        .contain-page {
+            flex-direction: column-reverse;
+            align-items: stretch;
+
+            .ticket {
+                .ticket-top {
+
+
+                    .title {
+                        p {
+                            font-size: 16px;
+
+                        }
+
+                        span {
+                            font-size: 12px;
+                        }
+                    }
                 }
             }
-
-            .form-control {
-                margin-bottom: 25px;
-            }
-
-            label {
-                display: block;
-                margin-bottom: 10px;
-                font-size: 16px;
-                font-weight: 600;
-            }
-        }
-
-        #errorMassege {
-            color: #ff6b6b;
-            font-size: 12px;
-        }
-
-        .error {
-            border-color: #ff6b6b;
         }
     }
 
 
-    @media (max-width: 522px) {
-        .main-register .forms {
-            width: 400px;
+}
 
-            form {
-                width: 370px;
-                .form-header p {
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-
-    @media (max-width: 450px) {
-        .main-register .forms {
-            width: 350px;
-
-            form {
-                width: calc(350px - 30px);
-            }
-        }
-    }
-
-    @media (max-width: 395px) {
-        .main-register .forms {
-            width: 300px;
-
-            form {
-                width: calc(300px - 30px);
-            }
-        }
-    }
-
-    @media (max-width: 350px) {
-
-        .main-register .forms {
-            width: 250px;
-
-            form {
-                width: calc(250px - 30px);
-            }
-        }
-    }
-/* Regiter Page */
+/* Start main-ticket */
 /* =================================== */
