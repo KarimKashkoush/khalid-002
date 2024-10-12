@@ -71,24 +71,14 @@ function forgetPassword() {
     }
 }
 
-
-// 
-
-let dateSelect = document.getElementById('dateBook');
-let timeSelect = document.getElementById('timeBook');
-let tickectSelect = document.getElementById('tickectBook');
-let ticketsNumber = document.getElementById('ticketsNumber');
-let imageTicket = document.getElementById('imageTicket');
-let requestTicket = document.getElementById('requestTicket');
-let ticketForm = document.getElementById('ticketForm');
-
-function formControl(event) {
-    if (dateSelect.value == '' || timeSelect.value == '' || tickectSelect.value == '' || ticketsNumber.value == '') {
-        event.preventDefault()
-    }
-}
-
-ticketForm.onchange = () => {
+function formControl() {
+    let dateSelect = document.getElementById('dateBook');
+    let timeSelect = document.getElementById('timeBook');
+    let tickectSelect = document.getElementById('tickectBook');
+    let ticketsNumber = document.getElementById('ticketsNumber');
+    let imageTicket = document.getElementById('imageTicket');
+    let requestTicket = document.getElementById('requestTicket');
+    let ticketForm = document.getElementById('ticketForm');
     if (dateSelect.value !== '' && timeSelect.value !== '' && tickectSelect.value !== '' && ticketsNumber.value !== '') {
         imageTicket.style.display = "none"
         requestTicket.style.display = "block"
@@ -101,3 +91,39 @@ ticketForm.onchange = () => {
 
 
 
+
+
+
+// حقل الاسم - السماح فقط بالحروف العربية والإنجليزية
+document.getElementById('cardholderName').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/[^a-zA-Z\u0600-\u06FF\s]/g, ''); // السماح بالحروف العربية والإنجليزية والمسافات فقط
+    e.target.value = value;
+});
+
+// حقل رقم البطاقة - 16 رقم فقط
+document.getElementById('cardNumber').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, ''); // إزالة أي شيء غير الأرقام
+    if (value.length > 16) {
+        value = value.slice(0, 16); // تقليص العدد إلى 16 رقم فقط
+    }
+    value = value.match(/.{1,4}/g)?.join(' ') || ''; // إضافة مسافة كل 4 أرقام
+    e.target.value = value;
+});
+
+// حقل تاريخ الصلاحية - الشهر مكون من رقمين، السنة 2 أو 4 أرقام
+document.getElementById('expiryDate').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, ''); // إزالة أي شيء غير الأرقام
+    if (value.length > 4) {
+        value = value.slice(0, 6); // الشهر 2 أرقام والسنة 4 أرقام فقط
+    }
+    if (value.length > 2) {
+        value = value.slice(0, 2) + '/' + value.slice(2); // إضافة '/' بين الشهر والسنة
+    }
+    e.target.value = value;
+});
+
+// حقل CVV - السماح فقط بـ 3 أرقام
+document.getElementById('cvv').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, ''); // إزالة أي شيء غير الأرقام
+    e.target.value = value.slice(0, 3); // تقليص العدد إلى 3 أرقام فقط
+});

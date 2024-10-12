@@ -1220,7 +1220,6 @@ select {
                 select,
                 input {
                     width: 100%;
-                    padding-block: 15px;
                 }
 
                 select {
@@ -1358,4 +1357,87 @@ select {
 }
 
 /* Start main-ticket */
+/* =================================== */
+/* =================================== */
+/* Start main-payment */
+.main-payment {
+    padding: 20px 15px;
+
+    >a {
+        margin-bottom: 20px;
+        transition: var(--transition-3);
+
+        &:hover {
+            color: var(--w-color);
+        }
+    }
+
+    .form {
+        margin-top: 50px;
+        margin-inline: auto;
+        width: 450px;
+        max-width: 100%;
+        border-radius: 10px;
+        border: 1px solid #ababab73;
+        padding: 15px;
+
+        form {
+            margin-bottom: 15px;
+
+            >p {
+                text-align: center;
+                border-bottom: 1px solid #ababab73;
+                padding-bottom: 15px;
+            }
+
+            .payment-method {
+                border-bottom: 1px solid #ababab73;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+
+                h2 {
+                    margin-block: 10px;
+                    text-align: center;
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                }
+            }
+
+
+            .form-control {
+                margin-bottom: 15px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-size: 14px;
+                color: var(--link-color);
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            button {
+                width: 100%;
+                background-color: #e52a6e;
+                border: none;
+                margin-top: 20px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+/* End main-payment */
 /* =================================== */
