@@ -1442,3 +1442,62 @@ select {
 
 /* End main-payment */
 /* =================================== */
+
+
+/* =================================== */
+/* exploer-container */
+.exploer-container {
+    margin-top: 30px;
+    width: 80%;
+    padding-inline: 15px;
+    margin-inline: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    .card {
+        margin: auto;
+        border-radius: 10px;
+        overflow: hidden;
+        width: fit-content;
+        max-width: 100%;
+
+        img {
+            max-width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            font-size: 14px;
+
+            p,
+            span span {
+                color: var(--w-color);
+                font-size: 16px;
+            }
+
+            i {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 786px) {
+    .exploer-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .exploer-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* exploer-container */
+/* =================================== */
